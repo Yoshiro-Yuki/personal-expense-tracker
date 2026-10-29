@@ -4,7 +4,7 @@ import streamlit as st
 
 START_DATE = date(2026, 10, 28)
 KEY_FILE = dict(st.secrets["gcp_service_account"])
-SHEET_URL = dict(st.secrets["gcp_url"])
+SHEET_URL = st.secrets["gcp_url"]
 
 def day_diff(curr: date) -> int:
     return (curr - START_DATE).days
